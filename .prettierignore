@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+src/app/material/material.module.ts
+*.min.js
+*.map

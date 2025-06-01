@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Theme colors
+// $red-palette
+// $green-palette
+// $blue-palette
+// $yellow-palette
+// $cyan-palette
+// $magenta-palette
+// $orange-palette
+// $chartreuse-palette
+// $spring-green-palette
+// $azure-palette
+// $violet-palette
+// $rose-palette
+
+@use "@angular/material" as mat;
+
+:root {
+	@include mat.toolbar-overrides(
+		(
+			container-background-color: #2196f3,
+			container-text-color: #00bcd4,
+			// title-text-font: Roboto,
+			// title-text-line-height: 24px,
+			// title-text-size: 20px,
+			// title-text-tracking: 0.15px,
+			// title-text-weight: 500,
+			// standard-height: 64px,
+			// mobile-height: 56px,,,,
+		)
+	);
+}
+
+html {
+	color-scheme: light;
+	@include mat.theme(
+		(
+			color: mat.$azure-palette,
+			typography: Roboto,
+			density: 0,
+		)
+	);
+}
+
+body {
+	background: var(--mat-sys-surface);
+	color: var(--mat-sys-on-surface);
+}
+
+section {
+	display: flex;
+	align-items: center;
+}
+
+.example-label {
+	font-size: 14px;
+	margin: 0 16px 0 8px;
+	min-width: 120px;
+}
+
+.example-button-row {
+	max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+	margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
